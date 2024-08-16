@@ -1,0 +1,111 @@
+.A{
+    border: #ffea00 5px outset;
+    background-color: #ffea00;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.R{
+    border: red 5px outset;
+    background-color: red;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;    border-radius: 50px;
+
+}
+.Az{
+    border: #000080    5px outset;
+    background-color: #000080    ;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.V{
+    border: rgb(4, 255, 0) 5px outset;
+    background-color: rgb(4, 255, 0);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.M{
+    border: rgb(163, 72, 148) 5px outset;
+    background-color: rgb(163, 72, 148);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.N{
+    border: rgb(255, 119, 0) 5px outset;
+    background-color: rgb(255, 119, 0);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.An{
+    border: rgb(173, 173, 173) 5px outset;
+    background-color: rgb(173, 173, 173);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.F{
+    border: rgb(244, 233, 75);
+    background-color: rgb(252, 242, 98);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.ES{
+    border: rgba(129, 63, 5, 0.94) 5px outset;
+    background-color:rgba(129, 63, 5, 0.94);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    border-radius: 50px;
+
+}
+.AMOR{
+    border: rgb(210, 8, 116) 5px outset;
+    background-color: rgb(210, 8, 116);
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    border-radius: 50px;
+
+    
+}
+body{
+    background-image: url('img/color.jpeg ');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+@media (max-width: 600px) {
+    .A, .R, .Az, .V, .M, .N, .An, .F, .ES, .AMOR {
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 30px;
+        height: 100px;
+    }
+    body{
+        background-image: url('img/color.jpeg ');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
