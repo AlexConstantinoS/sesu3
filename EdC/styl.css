@@ -95,7 +95,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-<<<<<<< HEAD
+
 .subt, .subt1 {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     text-align: center; /* Centrado horizontal */
@@ -106,7 +106,7 @@ body{
 .subt1 {
     color: beige;
 }
-=======
+
 .wrapper{
     position: absolute;
     left:50%;
