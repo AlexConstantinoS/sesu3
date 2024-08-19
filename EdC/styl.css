@@ -95,6 +95,16 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+.subt, .subt1 {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    text-align: center; /* Centrado horizontal */
+    margin-top: -40px; /* Mantén el margen superior */
+    font-size: 20px;
+}
+
+.subt1 {
+    color: beige;
+}
 @media (max-width: 600px) {
     .A, .R, .Az, .V, .M, .N, .An, .F, .ES, .AMOR {
         margin-left: 10px;
@@ -108,4 +118,18 @@ body{
         background-attachment: fixed;
         background-size: cover;
     }
+    /* Media query para dispositivos móviles */
+
+    .subt, .subt1 {
+        font-family: 'Comic Neue', cursive;
+        text-align: center;
+        margin-top: -40px;
+        font-size: 20px;
+    }
+    
+    .subt1 {
+        color: beige;
+    
+    }
 }
+
