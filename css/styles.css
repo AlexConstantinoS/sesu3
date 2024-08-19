@@ -23,6 +23,9 @@
  .info{
   width: 130px;
  }
+ .cesu{
+  height: 300px;
+ }
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10933,7 +10936,7 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 4rem;
+    height: 7rem;
     transition: height 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
@@ -10946,7 +10949,7 @@ p {
   }
   #mainNav.navbar-shrink .navbar-brand svg,
   #mainNav.navbar-shrink .navbar-brand img {
-    height: 5rem;
+    height: 8rem;
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
