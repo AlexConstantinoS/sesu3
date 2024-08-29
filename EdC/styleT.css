@@ -5,6 +5,13 @@ body{
     margin-left: 500px;
     padding-left: 50px;
 }
+.im{
+    position: fixed;
+}
+.im1{
+    position: fixed;
+    margin-left: 85% ;
+}
 
 .titulo{
     margin-left: 50px;
@@ -85,9 +92,20 @@ body{
 
 
 
-
 @media only screen and (max-width: 600px) {
     .formu{
         margin-left: -50px;
+        position: relative;
+        margin-top: -80px;
+    }
+        .im{
+            position: relative; /* Cambia la posición a absoluta para móviles */
+            width: 20%; /* Ajusta el ancho para ocupar el 100% de la pantalla */
+        }
+    
+        .im1 {
+            top: -80px;
+            position: relative;
+            margin-left: 50%;
     }
 }

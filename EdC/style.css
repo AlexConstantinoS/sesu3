@@ -101,11 +101,11 @@ body{
     }
         .im{
             position: relative; /* Cambia la posición a absoluta para móviles */
-            width: 50%; /* Ajusta el ancho para ocupar el 100% de la pantalla */
+            width: 20%; /* Ajusta el ancho para ocupar el 100% de la pantalla */
         }
     
         .im1 {
-            top: -99px;
+            top: -80px;
             position: relative;
             margin-left: 50%;
     }
