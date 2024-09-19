@@ -88,11 +88,6 @@ body{
             transform: none;
 }
 
-
-
-
-
-
 @media only screen and (max-width: 600px) {
     .formu{
         margin-left: -50px;

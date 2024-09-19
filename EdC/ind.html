@@ -4,149 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="image-wrapper">
             <img src="img/Escudo_y_logo_juntos_azul.png" alt="Imagen 1" class="side-image left">
+            <div class="titulo">ENCUESTA DE BIENESTAR PERSONAL <br>
+                Esta breve encuesta tiene como propósito ayudar a las personas a comprender meior cómo cuatro dimensiones de su bienestar (manejo del estrés, adaptabilidad, resiliencia y vitalidad emocional) afectan su calidad de vida general.
+                Responder la encuesta le ayudará a determinar con precisión su clasificación en cada una de estas cuatro dimensiones.
+              </div>
             <img src="img/cesu2.jpg" alt="Imagen 2" class="side-image right">
         </div>
+        <br><br>
         <div class="container">
             <h1>Test de Ejemplo</h1>
             <form id="testForm" method="POST" action="guardar_resultado.php" onsubmit="return confirmarEnvio();">
                 <!-- Pregunta 1 -->
                 <p>Pregunta 1: ¿Intento controlar mi estrés en el momento en que ocurre?</p>
-                <input type="radio" name="question1" value="2">casi siempre<br>
-                <input type="radio" name="question1" value="1">  A veces<br>
-                <input type="radio" name="question1" value="0.5">Casi nunca<br><br>
+                <input type="radio" name="question1" value="3.84">casi siempre<br>
+                <input type="radio" name="question1" value="1.92">  A veces<br>
+                <input type="radio" name="question1" value="1.28">Casi nunca<br><br>
             
                 <!-- Pregunta 2 -->
                 <p>Pregunta 2: ¿En los momentos de estrés, intento respirar profundamente o relajarme?</p>
-                <input type="radio" name="question2" value="2"> casi siempre<br>
-                <input type="radio" name="question2" value="1"> A veces<br>
-                <input type="radio" name="question2" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question2" value="3.84"> casi siempre<br>
+                <input type="radio" name="question2" value="1.92"> A veces<br>
+                <input type="radio" name="question2" value="1.28"> Casi nunca<br><br>
             
                 <p>Pregunta 3: ¿Intento activar una emoción positiva?</p>
-                <input type="radio" name="question3" value="2"> casi siempre<br>
-                <input type="radio" name="question3" value="1"> A veces<br>
-                <input type="radio" name="question3" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question3" value="3.84"> casi siempre<br>
+                <input type="radio" name="question3" value="1.92"> A veces<br>
+                <input type="radio" name="question3" value="1.28"> Casi nunca<br><br>
 
                 <p>Pregunta 4: ¿Intento hacer ejercicio físico o alguna otra actividad?</p>
-                <input type="radio" name="question4" value="2"> casi siempre<br>
-                <input type="radio" name="question4" value="1"> A veces<br>
-                <input type="radio" name="question4" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question4" value="3.84"> casi siempre<br>
+                <input type="radio" name="question4" value="1.92"> A veces<br>
+                <input type="radio" name="question4" value="1.28"> Casi nunca<br><br>
 
                 <p>Pregunta 5: ¿Intento ser más tolerante conmigo y con los demás cuando estoy estresada(o)</p>
-                <input type="radio" name="question5" value="2"> casi siempre<br>
-                <input type="radio" name="question5" value="1"> A veces<br>
-                <input type="radio" name="question5" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question5" value="3.84"> casi siempre<br>
+                <input type="radio" name="question5" value="1.92"> A veces<br>
+                <input type="radio" name="question5" value="1.28"> Casi nunca<br><br>
 
                 <p>Pregunta 6: ¿Intento ser menos crítica(o) cuando me siento enojado conmigo misma(o)?</p>
-                <input type="radio" name="question6" value="2"> casi siempre<br>
-                <input type="radio" name="question6" value="1"> A veces<br>
-                <input type="radio" name="question6" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question6" value="3.8"> casi siempre<br>
+                <input type="radio" name="question6" value="1.9"> A veces<br>
+                <input type="radio" name="question6" value="1.26"> Casi nunca<br><br>
 
                 <p>Pregunta 7: ¿Trato de cambiar a sentimientos de esperanza cuando me siento deprimida(o)?</p>
-                <input type="radio" name="question7" value="2"> casi siempre<br>
-                <input type="radio" name="question7" value="1"> A veces<br>
-                <input type="radio" name="question7" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question7" value="4"> casi siempre<br>
+                <input type="radio" name="question7" value="2.1"> A veces<br>
+                <input type="radio" name="question7" value="1.33"> Casi nunca<br><br>
 
                 <p>Pregunta 8: ¿Intento estar más tranquila(o) cuando me siento ansiosa(o)?</p>
-                <input type="radio" name="question8" value="2"> casi siempre<br>
-                <input type="radio" name="question8" value="1"> A veces<br>
-                <input type="radio" name="question8" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question8" value="3.84"> casi siempre<br>
+                <input type="radio" name="question8" value="1.92"> A veces<br>
+                <input type="radio" name="question8" value="1.28"> Casi nunca<br><br>
 
                 <p>Pregunta 9: ¿Intento compartir mis sentimientos con alguien cercano a mí?</p>
-                <input type="radio" name="question9" value="2"> casi siempre<br>
-                <input type="radio" name="question9" value="1"> A veces<br>
-                <input type="radio" name="question9" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question9" value="3.8"> casi siempre<br>
+                <input type="radio" name="question9" value="1.9"> A veces<br>
+                <input type="radio" name="question9" value="1.26"> Casi nunca<br><br>
 
                 <p>Pregunta 10: ¿Intento ser lo más flexible y adaptable posible?</p>
-                <input type="radio" name="question10" value="2"> casi siempre<br>
-                <input type="radio" name="question10" value="1"> A veces<br>
-                <input type="radio" name="question10" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question10" value="3.8"> casi siempre<br>
+                <input type="radio" name="question10" value="1.9"> A veces<br>
+                <input type="radio" name="question10" value="1.26"> Casi nunca<br><br>
 
                 <p>Pregunta 11: ¿Trato de ser optimista y esperanzada(o) sobre el resultado de los acontecimientos y/o circunstancias?</p>
-                <input type="radio" name="question11" value="2"> casi siempre<br>
-                <input type="radio" name="question11" value="1"> A veces<br>
-                <input type="radio" name="question11" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question11" value="3.8"> casi siempre<br>
+                <input type="radio" name="question11" value="1.9"> A veces<br>
+                <input type="radio" name="question11" value="1.26"> Casi nunca<br><br>
 
                 <p>Pregunta 12: ¿Intento aprovechar todas las oportunidades para el crecimiento y el cambio personal?</p>
-                <input type="radio" name="question12" value="2"> casi siempre<br>
-                <input type="radio" name="question12" value="1"> A veces<br>
-                <input type="radio" name="question12" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question12" value="3.9"> casi siempre<br>        <!--3.9-->
+                <input type="radio" name="question12" value="1.9"> A veces<br>
+                <input type="radio" name="question12" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 13: ¿Generalmente me siento feliz con quien soy como persona?</p>
-                <input type="radio" name="question13" value="2"> casi siempre<br>
-                <input type="radio" name="question13" value="1"> A veces<br>
-                <input type="radio" name="question13" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question13" value="3.9"> casi siempre<br>
+                <input type="radio" name="question13" value="1.9"> A veces<br>
+                <input type="radio" name="question13" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 14: ¿Creo que importo como individuo y que hago una diferencia en la vida de los demás?</p>
-                <input type="radio" name="question14" value="2"> casi siempre<br>
-                <input type="radio" name="question14" value="1"> A veces<br>
-                <input type="radio" name="question14" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question14" value="3.9"> casi siempre<br>
+                <input type="radio" name="question14" value="1.9"> A veces<br>
+                <input type="radio" name="question14" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 15: ¿Siento que hay alguien en mi vida que se preocupa por mí y me ama pase lo que pase?</p>
-                <input type="radio" name="question15" value="2"> casi siempre<br>
-                <input type="radio" name="question15" value="1"> A veces<br>
-                <input type="radio" name="question15" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question15" value="3.9"> casi siempre<br>
+                <input type="radio" name="question15" value="1.9"> A veces<br>
+                <input type="radio" name="question15" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 16: ¿Me siento agradecida(o) por el regalo de mi vida y aprecio todo lo que me ha traído, bueno y/o malo.?</p>
-                <input type="radio" name="question16" value="2"> casi siempre<br>
-                <input type="radio" name="question16" value="1"> A veces<br>
-                <input type="radio" name="question16" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question16" value="3.9"> casi siempre<br>
+                <input type="radio" name="question16" value="1.9"> A veces<br>
+                <input type="radio" name="question16" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 17: ¿Siento que soy capaz de influir en mi vida para mejorarla?</p>
-                <input type="radio" name="question17" value="2"> casi siempre<br>
-                <input type="radio" name="question17" value="1"> A veces<br>
-                <input type="radio" name="question17" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question17" value="3.8"> casi siempre<br>
+                <input type="radio" name="question17" value="1.9"> A veces<br>
+                <input type="radio" name="question17" value="1.26"> Casi nunca<br><br>
 
                 <p>Pregunta 18: ¿La creencia y la práctica espiritual son una parte importante de mi modo de vida?</p>
-                <input type="radio" name="question18" value="2"> casi siempre<br>
-                <input type="radio" name="question18" value="1"> A veces<br>
-                <input type="radio" name="question18" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question18" value="3.9"> casi siempre<br>
+                <input type="radio" name="question18" value="1.9"> A veces<br>
+                <input type="radio" name="question18" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 19: ¿Me siento tranquila(o) y en paz interior?</p>
-                <input type="radio" name="question19" value="2"> casi siempre<br>
-                <input type="radio" name="question19" value="1"> A veces<br>
-                <input type="radio" name="question19" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question19" value="4"> casi siempre<br>
+                <input type="radio" name="question19" value="2.1"> A veces<br>
+                <input type="radio" name="question19" value="1.33"> Casi nunca<br><br>
 
                 <p>Pregunta 20: ¿Siento aprecio por el cuidado que recibo de quienes me rodean?</p>
-                <input type="radio" name="question20" value="2"> casi siempre<br>
-                <input type="radio" name="question20" value="1"> A veces<br>
-                <input type="radio" name="question20" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question20" value="3.9"> casi siempre<br>
+                <input type="radio" name="question20" value="1.9"> A veces<br>
+                <input type="radio" name="question20" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 21: ¿Me despierto con esperanza y espero con ansias la promesa de cada nuevo día?</p>
-                <input type="radio" name="question21" value="2"> casi siempre<br>
-                <input type="radio" name="question21" value="1"> A veces<br>
-                <input type="radio" name="question21" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question21" value="3.9"> casi siempre<br>
+                <input type="radio" name="question21" value="1.9"> A veces<br>
+                <input type="radio" name="question21" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 22: ¿Abordo las situaciones con un sentimiento alegre?</p>
-                <input type="radio" name="question22" value="2"> casi siempre<br>
-                <input type="radio" name="question22" value="1"> A veces<br>
-                <input type="radio" name="question22" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question22" value="3.9"> casi siempre<br>
+                <input type="radio" name="question22" value="1.9"> A veces<br>
+                <input type="radio" name="question22" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 23: ¿Siento una conexión cálida y amorosa con casi todas las personas y con todo lo que hay en mi vida?</p>
-                <input type="radio" name="question23" value="2"> casi siempre<br>
-                <input type="radio" name="question23" value="1"> A veces<br>
-                <input type="radio" name="question23" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question23" value="3.9"> casi siempre<br>
+                <input type="radio" name="question23" value="1.9"> A veces<br>
+                <input type="radio" name="question23" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 24: ¿Me siento animada(o) y entusiasmada(o) con lo que estoy haciendo en mi vida.?</p>
-                <input type="radio" name="question24" value="2"> casi siempre<br>
-                <input type="radio" name="question24" value="1"> A veces<br>
-                <input type="radio" name="question24" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question24" value="3.9"> casi siempre<br>
+                <input type="radio" name="question24" value="1.9"> A veces<br>
+                <input type="radio" name="question24" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 25: ¿Siento mucha alegría y deleite por lo maravillosa que es la vida?</p>
-                <input type="radio" name="question25" value="2"> casi siempre<br>
-                <input type="radio" name="question25" value="1"> A veces<br>
-                <input type="radio" name="question25" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question25" value="3.9"> casi siempre<br>
+                <input type="radio" name="question25" value="1.9"> A veces<br>
+                <input type="radio" name="question25" value="1.3"> Casi nunca<br><br>
 
                 <p>Pregunta 26: ¿Siento una pasión sincera por casi todo lo que hago.?</p>
-                <input type="radio" name="question26" value="2"> casi siempre<br>
-                <input type="radio" name="question26" value="1"> A veces<br>
-                <input type="radio" name="question26" value="0.5"> Casi nunca<br><br>
+                <input type="radio" name="question26" value="3.9"> casi siempre<br>
+                <input type="radio" name="question26" value="1.9"> A veces<br>
+                <input type="radio" name="question26" value="1.3"> Casi nunca<br><br>
             
+                <div class="titulo">AVISO LEGAL
+                    El contenido de este sitio, como texto, gráficos, imágenes, información y otros materiales incluidos tiene únicamente fines informativos. El Contenido no pretende sustituir el asesoramiento, diagnóstico o tratamiento médico profesional. No sustituye un examen médico ni reemplaza la necesidad de servicios prestados por un profesional médico.
+                    Busca siempre el consejo de tu médico antes de seguir cualquier tratamiento o régimen. Sólo tu médico puede aconsejarte sobre lo que es seguro y eficaz para ti. Nunca ignores el consejo médico profesional ni demores en buscarlo</div>
                 <button type="submit">Ver Resultado</button>
                 <br><br>
                 <button onclick="window.location.href='http://localhost/EdC/SESUS/inde.html';" class="redirect-button">regresar</button>
@@ -154,7 +162,7 @@
             
             
             <script>
-              function confirmarEnvio() {
+       function confirmarEnvio() {
     let score = 0;
 
     // Sumar los valores de las respuestas seleccionadas
@@ -169,25 +177,31 @@
         score += parseFloat(pregunta.value);
     }
 
+    // Valor máximo posible con los valores actuales
+    const maxScore = (3.9 * 13) + (4 * 2) + (3.84 * 6) + (3.8 * 5); // Calculado según los valores de tu HTML
+
+    // Calcular el porcentaje del score
+    const porcentaje = Math.round((score / maxScore) * 100);
+
     // Diagnosticar los resultados basados en la puntuación total
     let frase;
-    if (score >= 39) {
-        frase = "¡Excelente manejo del estrés! Sigues un camino muy positivo.";
-    } else if (score >= 26) {
-        frase = "Buen trabajo, pero hay áreas en las que puedes mejorar.";
-    } else {
-        frase = "Es importante que trabajes en tus habilidades de manejo del estrés.";
-    }
+if (porcentaje >= 69) {
+    frase = "¡Excelente manejo del estrés! Sigues un camino muy positivo.";
+} else if (porcentaje >= 36) {
+    frase = "Buen trabajo, pero hay áreas en las que puedes mejorar.";
+} else {
+    frase = "Es importante que trabajes en tus habilidades de manejo del estrés.";
+}
 
     // Mostrar el resultado y la frase al usuario
-    const confirmacion = confirm(`Tu puntuación es ${score}/52. ${frase}\n¿Deseas guardar el resultado?`);
+    const confirmacion = confirm(`Tu puntuación es ${porcentaje}% /100%. ${frase} ¡FELICIDADES! acabas de completar la encuesta de bienestar profesional \n¿Deseas guardar el resultado?`);
 
     // Si el usuario confirma, se envían los datos; de lo contrario, se cancela el envío
     return confirmacion;
 }
+</script>
 
 
-                </script>
                 
                 
             

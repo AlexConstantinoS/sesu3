@@ -1,217 +1,165 @@
-.A{
-    border: #ffea00 5px outset;
-    background-color: #ffea00;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.R{
-    border: red 5px outset;
-    background-color: red;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;    border-radius: 50px;
-
-}
-.Az{
-    border: #000080    5px outset;
-    background-color: #000080    ;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.V{
-    border: rgb(4, 255, 0) 5px outset;
-    background-color: rgb(4, 255, 0);
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.M{
-    border: rgb(163, 72, 148) 5px outset;
-    background-color: rgb(163, 72, 148);
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.N{
-    border: rgb(255, 119, 0) 5px outset;
-    background-color: rgb(255, 119, 0);
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.An{
-    border: rgb(173, 173, 173) 5px outset;
-    background-color: rgb(173, 173, 173);
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.F{
-    border: rgb(244, 233, 75);
-    background-color: rgb(252, 242, 98);
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.ES{
-    border: rgba(129, 63, 5, 0.94) 5px outset;
-    background-color:rgba(129, 63, 5, 0.94);
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    border-radius: 50px;
-
-}
-.AMOR{
-    border: rgb(210, 8, 116) 5px outset;
-    background-color: rgb(210, 8, 116);
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 50px;
-    margin-bottom: 40px;
-    border-radius: 50px;
-
-    
-}
-body{
-    background-image: url('img/color.jpeg ');
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-image: url('img/color.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-.subt, .subt1 {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    text-align: center; /* Centrado horizontal */
-    margin-top: -40px; /* Mantén el margen superior */
-    font-size: 20px;
-}
-
-.subt1 {
-    color: beige;
-}
-
-.wrapper{
-    position: absolute;
-    left:50%;
-    transform: translate(-50%, -50%);
-    width: fit-content;
-    height:auto;
-}
-:root {
-    --bg: #1a1e24;
-    --color: #eee;
-    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
-}
-
-.wrapper {
-    padding: 1.5rem 0;
-    -webkit-filter: url('#goo');
-            filter: url('#goo');
-}
-
-.button {
-    display: inline-block;
+.titulo {
+    font-size: 36px;
     text-align: center;
-    background: var(--color);
-    color: var(--bg);
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.subt {
+    font-size: 24px;
     font-weight: bold;
-    padding: 1.18em 1.32em 1.03em;
-    line-height: 1;
-    border-radius: 1em;
-    position: relative;
-    min-width: 8.23em;
-    text-decoration: none;
-    font-family: var(--font);
-    font-size: 1.25rem;
+    text-align: center;
+    padding: 15px;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-.button:before,
-.button:after {
-    width: 4.4em;
-    height: 2.95em;
+.subt:hover {
+    opacity: 0.9;
+}
+
+/* Estilos específicos para cada emoción */
+.subt.alegria { background-color: #FFD700; } /* Amarillo */
+.subt.enojo { background-color: #FF6347; } /* Rojo */
+.subt.tristeza { background-color: #4682B4; } /* Azul */
+.subt.asco { background-color: #28a745; } /* Verde */
+.subt.miedo { background-color: #FF69B4; } /* Rosa */
+.subt.sorpresa { background-color: orange; }
+.subt.ansiedad { background-color: #888; }
+.subt.emociones { background-color: saddlebrown; }
+.subt.felicidad { background-color: rgb(238, 223, 87); }
+.subt.amor { background-color: #b006a2; } /* Rosa fuerte */
+
+/* Panel lateral de cuestionario */
+.questionnaire-panel {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -4px 0px 15px rgba(255, 18, 18, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.questionnaire-panel h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.questionnaire-panel fieldset {
+    margin-bottom: 15px;
+}
+
+.questionnaire-panel legend, 
+.questionnaire-panel label {
+    color: white; /* Cambia el color del texto del panel a blanco */
+}
+
+.close-btn {
     position: absolute;
-    content: "";
-    display: inline-block;
-    background: var(--color);
-    border-radius: 50%;
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: -webkit-transform 1s ease;
-    transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    z-index: -1;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: red;
 }
 
-.button:before {
-    top: -25%;
-    left: 20%;
+.close-btn:hover {
+    color: #555;
 }
 
-.button:after {
-    bottom: -25%;
-    right: 20%;
+.send-all-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
 }
 
-.button:hover:before,
-.button:hover:after {
-    -webkit-transform: none;
-            transform: none;
+.send-all-btn:hover {
+    background-color: #218838;
 }
 
+/* Responsivo - Pantallas medianas */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
+    .titulo {
+        font-size: 28px;
+    }
 
+    .subt {
+        font-size: 18px;
+        padding: 10px;
+        width: 90%;
+    }
 
+    .questionnaire-panel {
+        width: 100%;
+        height: 100%;
+    }
 
+    .send-all-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+        width: 90%;
+    }
 
-@media only screen and (max-width: 600px) {
-    .formu{
-        margin-left: -50px;
+    .close-btn {
+        font-size: 24px;
     }
 }
 
-@media (max-width: 600px) {
-    .A, .R, .Az, .V, .M, .N, .An, .F, .ES, .AMOR {
-        margin-left: 10px;
-        margin-right: 10px;
-        border-radius: 30px;
-        height: 100px;
+/* Responsivo - Pantallas pequeñas */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
     }
-    body{
-        background-image: url('img/color.jpeg ');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-    /* Media query para dispositivos móviles */
 
-    .subt, .subt1 {
-        font-family: 'Comic Neue', cursive;
-        text-align: center;
-        margin-top: -40px;
-        font-size: 20px;
+    .subt {
+        font-size: 16px;
+        padding: 8px;
     }
-    
-    .subt1 {
-        color: beige;
-    
+
+    .send-all-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .questionnaire-panel {
+        width: 100%;
+        height: 100vh;
     }
 }
-

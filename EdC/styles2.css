@@ -1,0 +1,169 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Para asegurar que los elementos no sobrepasen el tamaño definido */
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw; /* No permitir que sobrepase el ancho de la pantalla */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Evitar desbordamientos no deseados */
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px; /* Limitar el ancho máximo del contenedor */
+    margin-bottom: 20px;
+}
+
+.side-image {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.container {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px; /* Limitar el ancho máximo */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Limitar la altura */
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    color: #444;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.redirect-button {
+    background-color: #333;
+    margin-top: 10px;
+}
+
+.redirect-button:hover {
+    background-color: #555;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 786px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .side-image {
+        width: 80px;
+        height: auto;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+/* Adaptación para pantallas muy pequeñas */
+@media (max-width: 430px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .side-image {
+        width: 150px;
+        margin: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+        max-width: none; /* Asegurar que use todo el ancho disponible */
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .image-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .titulo {
+        display: none; /* Oculta el título */
+    }
+}

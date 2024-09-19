@@ -2,125 +2,195 @@
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styl.css">
     <link rel="icon" href="img/6911451.png" type="image/x-icon">
-
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emociones</title>
 </head>
-<body bgcolor="#ffffff">
-    <br><br>
-   <div class="A" onclick="handleClick()">
-   <div class="subt">ALEGRIA</div>
-   </div>
-   <br><br>
+<body>
+    <div class="titulo">¿HOY ME SIENTO?</div>
+    <br>
 
-   <div class="R" onclick="handleClickR()">
-    <div class="subt">ENOJO</div>
-   </div> 
-   <br><br>
+    <!-- Lista de emociones con colores diferentes -->
+    <div class="subt alegria" onclick="openQuestionnaire('alegria')">ALEGRÍA</div>
+    <div class="subt enojo" onclick="openQuestionnaire('enojo')">ENOJO</div>
+    <div class="subt tristeza" onclick="openQuestionnaire('tristeza')">TRISTEZA</div>
+    <div class="subt asco" onclick="openQuestionnaire('asco')">ASCO</div>
+    <div class="subt miedo" onclick="openQuestionnaire('miedo')">MIEDO</div>
+    <div class="subt sorpresa" onclick="openQuestionnaire('sorpresa')">SORPRESA</div>
+    <div class="subt ansiedad" onclick="openQuestionnaire('ansiedad')">ANSIEDAD</div>
+    <div class="subt emociones" onclick="openQuestionnaire('emociones')">EMOCIONES_SOCIALES</div>
+    <div class="subt felicidad" onclick="openQuestionnaire('felicidad')">FELICIDAD</div>
+    <div class="subt amor" onclick="openQuestionnaire('amor')">AMOR</div>
 
-   <div class="Az" onclick="handleClickAz()">
-       <div class="subt1">TRISTEZA</div>
-   </div> 
-   <br><br>
+    <!-- Panel lateral para los cuestionarios -->
+    <div class="questionnaire-panel" id="questionnairePanel">
+        <span class="close-btn" onclick="closeQuestionnaire()">Cerrar ×</span>
+        <h3 id="panelTitle">Cuestionario</h3>
+        <form id="emotionForm">
+            <!-- Las preguntas se generarán dinámicamente aquí -->
+        </form>
+        <button type="button" class="btn btn-primary mt-3" onclick="saveResponse()">Guardar</button>
+    </div>
 
-   <div class="V" onclick="handleClickV()">
-    <div class="subt">ASCO</div>
-   </div> 
-   <br><br>
+    <!-- Botón para enviar todas las respuestas -->
+    <button class="send-all-btn" onclick="sendAll()">Enviar todos los cuestionarios</button>
 
-   <div class="M" onclick="handleClickM()">
-       <div class="subt">MIEDO</div>
-   </div> 
-   <br><br>
-
-   <div class="N" onclick="handleClickN()">
-       <div class="subt">SORPRESA</div>
-   </div>
-   <br><br>
-
-   <div class="An" onclick="handleClickAn()">
-       <div class="subt">ANSIEDAD</div>
-   </div>
-   <br><br>
-
-   <div class="ES" onclick="handleClickES()">
-       <div class="subt">EMOCIONES SOCIALES</div>
-   </div>
-   <br><br>
-
-   <div class="F" onclick="handleClickF()">
-       <div class="subt">FELICIDAD</div>
-   </div>
-   <br><br>
-
-   <div class="AMOR" onclick="handleClickAMOR()">
-       <div class="subt">AMOR</div>
-   </div>
-   
-
+    <!---boton de regreso-->
+    <div class="text-center mt-4">
+        <a href="/EdC/SESUS/inde.html" class="btn btn-info">PAGINA PRINCIPAL</a>
+    </div>
 
     <script>
-         function handleClick() {
-        window.location.href = 'Alegria.html';}
-        
-        function handleClickR() {
-        window.location.href = 'enojo.html';
+        let currentEmotion = '';
+
+        // Cuestionarios por emoción
+        const questionnaires = {
+            alegria: {
+                title: 'Familia de Alegría',
+                questions: [
+                    { question: ' Elige una opcion ', options: ['ENTUSIASMO','EUFORIA','EXCITACION','CONTENTO','DELEITE','DIVERSION','PLACER','ENTRETENIMIENTO','GRATIFICACION','SATISFACCION','CAPRICHO','EXTASIS','ALIVIO','REGOCIJO'] },
+                ]
+            },
+            enojo: {
+                title: 'Familia del Enojo',
+                questions: [
+                { question: ' Elige una opcion ', options: ['RABIA','COLERA','RENCOR','ODIO','FURIA','INDIGNACION','DESPRECIO','EXASPERACION','TENSION','EXCITACION','AGITACION','IRA','CELOS','IMPOTENCIA','ANTIPATIA','RECHAZO','HOSTILIDAD','RESENTIMIENTO','RECELO','ENVIDIA'] },
+                ]
+            },
+            tristeza: {
+                title: 'Famila de Tristeza',
+                questions: [
+                { question: ' Elige una opcion ', options: ['DEPRECIÓN','FRUSTRACCION','PREOCUPACION','DECEPCION','AFLICCION','DOLOR','PESAR','DESCONSUELO','ESIMISMO','MELANCOLIA','AUTOCOMPASION','SOLEDAD','DESALIENTO','ABASTIMIENTO','DISGUSTO'] },
+                ]
+            },
+            asco: {
+                title: 'Familia del asco',
+                questions: [
+                { question: ' Elige una opcion ', options: ['AVERRACION','REPUGNACION','RECHAZO','DESPRECIO'] },
+                ]
+            },
+            miedo: {
+                title: 'Familia de miedo',
+                questions: [
+                { question: ' Elige una opcion ', options: ['TEMOR','HORROR','PANICO','TERROR','PAVOR','DESASOSIEGO','SUSTO','FOBIA'] },
+                ]
+            },
+            sorpresa: {
+                title: 'Familia de sorpresa',
+                questions: [
+                { question: ' Elige una opcion ', options: ['SOBRESACTO','ASOMBRO','DESCONCIENTO','CONFUNCION','PERPLEJIDAD','ADMIRACCION','INQUIETUD','EXPECTATIVA','IMPANCIENCIA','ANTICIPACION'] },
+                ]
+            },
+            ansiedad: {
+                title: 'Familia de ansiedad',
+                questions: [
+                { question: ' Elige una opcion ', options: ['ANGUSTIA','DESESPERACION','INQUIETUD','ESTRES','PREOCUPACION','ANHELO','DESAZON','CONSTERNACION','NERVIOSISMO'] },
+                ]
+            },
+            emociones: {
+                title: 'Familia de emociones sociales',
+                questions: [
+                { question: ' Elige una opcion ', options: ['VERGUENZA','CULPABILIDAD','TIMIDEZ','VERGUENZA AJENA','BOCHORNO','PUDOR','RECATO','RUBOR','VERECUNDIA','SONROJO'] },
+                ]
+            },
+            felicidad: {
+                title: 'Familia de felicidad',
+                questions: [
+                { question: ' Elige una opcion ', options: ['BIENESTAR','SATISFACCION','ARMONIA','EQUILIBRIO','PLENITUD','PAZ INTERIOR','SERENIDAD','GOZO','DICMA','PLACIDEZ','TRANQUILIDAD'] },
+                ]
+            },
+            amor: {
+                title: 'Familia de Amor',
+                questions: [
+                { question: ' Elige una opcion ', options: ['ACEPTACION','AFECTO','CARIÑO','TERNURA','SIMPATIA','INTERES','CORDIALIDAD','CONFIANZA','AMABILIDAD','AFINIDAD','RESPETO','DEVOCION','ADORACION','VENERACION','ENAMORAMIENTO','GRATITUD','COMPASION'] },
+                ]
+            }
+        };
+        // Función para abrir el cuestionario y mostrar el panel
+        function openQuestionnaire(emotion) {
+            currentEmotion = emotion;
+            const panel = document.getElementById('questionnairePanel');
+            const form = document.getElementById('emotionForm');
+            const title = document.getElementById('panelTitle');
+
+    // Cambiar el título del panel
+    title.innerText = questionnaires[emotion].title;
+
+    // Limpiar el contenido anterior del formulario
+    form.innerHTML = '';
+
+    // Generar las preguntas dinámicamente
+    questionnaires[emotion].questions.forEach((q, index) => {
+        const fieldset = document.createElement('fieldset');
+        const legend = document.createElement('legend');
+        legend.innerText = q.question;
+        fieldset.appendChild(legend);
+
+        q.options.forEach(option => {
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = `question_${index}`;
+            input.value = option;
+            label.appendChild(input);
+            label.appendChild(document.createTextNode(option));
+            fieldset.appendChild(label);
+            fieldset.appendChild(document.createElement('br'));
+        });
+
+        form.appendChild(fieldset);
+    });
+
+    // Cambiar el color del panel según la emoción seleccionada
+    const emotionColors = {
+        alegria: '#FFD700',
+        enojo: '#FF6347',
+        tristeza: '#4682B4',
+        asco: '#28a745',
+        miedo: '#FF69B4',
+        sorpresa: 'orange',
+        ansiedad: '#888',
+        emociones: 'saddlebrown',
+        felicidad: 'rgb(238, 223, 87)',
+        amor: '#b006a2'
+    };
+
+    panel.style.backgroundColor = emotionColors[emotion]; // Cambia el fondo del panel
+
+    // Mostrar el panel
+    panel.style.display = 'block';
     }
 
-    function handleClickAz() {
-        window.location.href = 'tristeza.html';
-    }
 
-    function handleClickV() {
-        window.location.href = 'asco.html';
-    }
+        // Función para cerrar el panel
+        function closeQuestionnaire() {
+            const panel = document.getElementById('questionnairePanel');
+            panel.style.display = 'none';
+        }
 
-    function handleClickM() {
-        window.location.href = 'miedo.html';
-    }
+        // Función para guardar las respuestas en localStorage
+        function saveResponse() {
+            const form = document.getElementById('emotionForm');
+            const responses = {};
 
-    function handleClickN() {
-        window.location.href = 'sorpresa.html';
-    }
-    function handleClickAn() {
-        window.location.href = 'ansiedad.html';
-    }
+            // Recoger todas las respuestas seleccionadas
+            Array.from(form.elements).forEach(input => {
+                if (input.checked) {
+                    responses[input.name] = input.value;
+                }
+            });
 
-    function handleClickES() {
-        window.location.href = 'emocion_social.html';
-    }
-
-    function handleClickF() {
-        window.location.href = 'felicidad.html';
-    }
-
-    function handleClickAMOR() {
-        window.location.href = 'amor.html';
-    }
-
-
+            if (Object.keys(responses).length > 0) {
+                localStorage.setItem(currentEmotion, JSON.stringify(responses));
+                alert('Respuestas guardadas para ' + currentEmotion);
+                closeQuestionnaire(); // Cerrar el panel después de guardar
+            } else {
+                alert('Por favor, responde todas las preguntas.');
+            }
+        }
     </script>
-<br>
-<div class="wrapper">
-    <a class="button" href="/EdC/SESUS/inde.html">regresar</a>
-  
-  </div>
-  
-  <!-- Filter: https://css-tricks.com/gooey-effect/ -->
-  <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <defs>
-        <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-        </filter>
-    </defs>
-  </svg>
-
 </body>
 </html>
