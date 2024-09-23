@@ -1,0 +1,32 @@
+/* Estilo para los elementos de navegación */
+.navbar-nav .nav-item .nav-link {
+    color: rgb(0, 0, 0); /* Cambia el color del texto de los enlaces */
+}
+
+/* Opcional: cambia el color del texto de los nav-items al pasar el ratón por encima */
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgb(226, 145, 79); /* Cambia el color del texto cuando el ratón pasa por encima */
+}
+
+/* Estilo para el texto dentro del nav-item si usas un h2 como en tu código */
+.navbar-nav .nav-item h2.colortitulo {
+    color: black; /* Cambia el color del texto del h2 */
+}
+.colortitulo{
+    color: rgb(133, 128, 128);
+    margin-right: 40px;
+   }
+
+.e3top{
+    margin-top: 170px;
+}
+/* Aplica color naranja a los nav-links */
+.nav-link {
+    color: rgb(0, 0, 0) !important;
+}
+
+/* Para asegurar que el color se mantenga incluso en hover y focus */
+.nav-link:hover,
+.nav-link:focus {
+    color: orange !important;
+}

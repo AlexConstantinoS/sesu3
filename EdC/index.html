@@ -172,25 +172,39 @@
         }
 
         // Función para guardar las respuestas en localStorage
-        function saveResponse() {
-            const form = document.getElementById('emotionForm');
-            const responses = {};
-
-            // Recoger todas las respuestas seleccionadas
-            Array.from(form.elements).forEach(input => {
-                if (input.checked) {
-                    responses[input.name] = input.value;
-                }
-            });
-
-            if (Object.keys(responses).length > 0) {
-                localStorage.setItem(currentEmotion, JSON.stringify(responses));
-                alert('Respuestas guardadas para ' + currentEmotion);
-                closeQuestionnaire(); // Cerrar el panel después de guardar
-            } else {
-                alert('Por favor, responde todas las preguntas.');
-            }
+    // Función para guardar las respuestas en el servidor
+function saveResponse() {
+    const form = document.getElementById('emotionForm');
+    const responses = {};
+    
+    // Recoger todas las respuestas seleccionadas
+    Array.from(form.elements).forEach(input => {
+        if (input.checked) {
+            responses[input.name] = input.value;
         }
+    });
+
+    if (Object.keys(responses).length > 0) {
+        fetch('guardar_respuestas.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ emotion: currentEmotion, responses })
+        })
+        .then(response => response.text())
+        .then(message => {
+            alert('Respuestas guardadas exitosamente');
+            // Reiniciar la página
+            window.location.reload();
+        })
+        .catch(error => {
+            alert('Error: ' + error);
+        });
+    } else {
+        alert('Por favor, responde todas las preguntas.');
+    }
+}
+
+
     </script>
 </body>
 </html>
